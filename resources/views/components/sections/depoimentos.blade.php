@@ -48,16 +48,16 @@
                     </svg>
                 </div>
                 <p class="text-gray-700 leading-relaxed mb-6">
-                    Contratei para manutenção da câmara fria do meu restaurante. Serviço rápido, eficiente e com
-                    preço justo. A equipe é muito profissional e pontual.
+                    Contratei para manutenção de dois ar-condicionados aqui de casa. Serviço rápido, eficiente e com
+                    preço justo. Equipe é muito profissional e pontual.
                 </p>
                 <div class="flex items-center">
                     <div class="w-12 h-12 bg-accent-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                         A
                     </div>
                     <div class="ml-4">
-                        <h4 class="font-semibold text-gray-900">Ana Rodrigues</h4>
-                        <p class="text-sm text-gray-500">Proprietária de Restaurante</p>
+                        <h4 class="font-semibold text-gray-900">Bárbara Silva</h4>
+                        <p class="text-sm text-gray-500">Proprietária de Residência</p>
                     </div>
                 </div>
                 <div class="flex mt-4 text-yellow-400">
