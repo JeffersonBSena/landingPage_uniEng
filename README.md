@@ -1,60 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# União Engenharia — Landing Page
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Landing page vitrine para empresa de serviços de refrigeração e climatização empresarial.
 
-## About Laravel
+## Sobre o Projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Site institucional desenvolvido para apresentar os serviços da União Engenharia: instalação, manutenção preventiva/corretiva e projetos de climatização com foco em ambientes corporativos (escritórios, lojas, galpões e indústrias).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+A página funciona como uma vitrine digital — exibindo serviços, diferenciais, depoimentos de clientes e canais de contato rápido via WhatsApp.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Por que Laravel para uma Landing Page?
 
-## Learning Laravel
+O Laravel pode parecer robusto demais para uma página estática, mas a escolha foi **estratégica e pensada no longo prazo**:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- **CRM integrado** — o próximo passo é um módulo de gestão de clientes, orçamentos e histórico de serviços, aproveitando o Eloquent ORM e Migrations do Laravel com MySQL
+- **Notificações automatizadas** — envio de lembretes de manutenção preventiva, follow-up de orçamentos e atualizações de status via e-mail e WhatsApp, usando o sistema de Queues e Notifications nativo
+- **Painel administrativo** — área restrita para a equipe gerenciar serviços, clientes e agendamentos, com autenticação já pronta no ecossistema
+- **API para integrações** — possibilidade futura de app mobile ou integrações com ERPs, usando as rotas API do Laravel
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Começar com Laravel desde o dia 1 evita uma migração custosa no futuro e garante que a base de código já está preparada para escalar.
 
-## Laravel Sponsors
+## Tech Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Camada     | Tecnologia        |
+|------------|--------------------|
+| Backend    | Laravel 12 (PHP)   |
+| Banco      | MySQL              |
+| Frontend   | Blade + Tailwind CSS |
+| Build      | Vite               |
 
-### Premium Partners
+## Roadmap
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- [x] Landing page institucional
+- [x] Design responsivo (mobile, tablet, desktop)
+- [x] Integração WhatsApp (botão flutuante + CTAs)
+- [ ] Painel administrativo (autenticação + dashboard)
+- [ ] CRM — cadastro de clientes e orçamentos
+- [ ] Notificações — lembretes de manutenção via e-mail/WhatsApp
+- [ ] Agendamento online de visitas técnicas
+- [ ] API REST para integrações externas
 
-## Contributing
+## Como Rodar
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+# Clonar o repositório
+git clone <repo-url>
+cd refrigeracao
 
-## Code of Conduct
+# Instalar dependências
+composer install
+npm install
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Configurar ambiente
+cp .env.example .env
+php artisan key:generate
 
-## Security Vulnerabilities
+# Banco de dados (configurar .env com credenciais MySQL)
+php artisan migrate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Rodar em desenvolvimento
+php artisan serve
+npm run dev
+```
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# landingPage_uniEng
+O site estará disponível em `http://localhost:8000`.
